@@ -11,6 +11,7 @@ giropops-senhas:
     type: "NodePort"
     port: 5000
     targetPort: 5000
+    NodePort: 5000
     name: "giropops-senhas-port"
   resources:
     requests:
