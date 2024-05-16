@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   labels:
     app: giropops-senhas
-  name: {{ .Values.giropops-senhas.name }}
+  name: {{ .Values.giropopsSenhas.name }}
 spec:
-  replicas: {{ .Values.giropops-senhas.replicas }}
+  replicas: {{ .Values.giropopsSenhas.replicas }}
   selector:
     matchLabels:
       app: giropops-senhas
@@ -15,15 +15,15 @@ spec:
         app: giropops-senhas
     spec:
       containers:
-      - image: {{ .Values.giropops-senhas.image }}
+      - image: {{ .Values.giropopsSenhas.image }}
         name: giropops-senhas
         ports:
-        - containerPort: {{ .Values.giropops-senhas.service.port }}
+        - containerPort: {{ .Values.giropopsSenhas.service.port }}
         imagePullPolicy: Always
         resources:
           limits:
-            memory: {{ .Values.giropops-senhas.resources.limits.memory }}
-            cpu: {{ .Values.giropops-senhas.resources.limits.cpu }}
+            memory: {{ .Values.giropopsSenhas.resources.limits.memory }}
+            cpu: {{ .Values.giropopsSenhas.resources.limits.cpu }}
           requests:
-            memory: {{ .Values.giropops-senhas.resources.requests.memory }}
-            cpu: {{ .Values.giropops-senhas.resources.requests.cpu }}
+            memory: {{ .Values.giropopsSenhas.resources.requests.memory }}
+            cpu: {{ .Values.giropopsSenhas.resources.requests.cpu }}
